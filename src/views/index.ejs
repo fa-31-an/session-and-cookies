@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    
+
+    <form action="/" method="post">
+      <div>
+        <label for="name">Ingrese un nombre</label>
+        <input type="text" name="name" id="name" style="display: block" />
+        <% if (locals.errors && errors.name) { %>
+          <small><%= errors.name.msg %> </small>
+        <% } %>
+      </div>
+      <div>
+        <label for="email">Ingrese un email</label>
+        <input type="email" name="email" id="email" style="display: block" />
+        <% if (locals.errors && errors.email) { %>
+          <small><%= errors.email.msg %> </small>
+        <% } %>
+      </div>
+      <div>
+        <label for="age">Ingrese una edad</label>
+        <input type="text" name="age" id="age" style="display: block" />
+        <% if (locals.errors && errors.age) { %>
+          <small><%= errors.age.msg %> </small>
+        <% } %>
+      </div>
+      <div>
+        <label for="color"
+          >Seleccione el color de fondo que desea colocar</label
+        >
+        <select name="color" id="color" style="display: block">
+          <option value="red">Rojo</option>
+          <option value="green">Verde</option>
+          <option value="blue">Azul</option>
+          <option value="orange">Naranja</option>
+          <option value="violet">Violeta</option>
+          <option value="yellow">Amarillo</option>
+        </select>
+      </div>
+      <input
+        type="submit"
+        value="enviar"
+        name="enviar"
+        style="display: block"
+      />
+    </form>
+  </body>
+</html>
