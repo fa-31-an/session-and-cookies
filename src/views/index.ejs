@@ -25,7 +25,7 @@
       </div>
       <div>
         <label for="age">Ingrese una edad</label>
-        <input type="text" name="age" id="age" style="display: block" />
+        <input type="text" name="age" id="age" value="0" style="display: block" />
         <% if (locals.errors && errors.age) { %>
           <small><%= errors.age.msg %> </small>
         <% } %>
@@ -42,6 +42,10 @@
           <option value="violet">Violeta</option>
           <option value="yellow">Amarillo</option>
         </select>
+      </div>
+      <div>
+        <label for="recordar">¿Recordar color seleccionado?</label>
+        <input type="checkbox" name="recordar" id="recordar">
       </div>
       <input
         type="submit"

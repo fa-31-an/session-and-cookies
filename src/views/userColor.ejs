@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <main>
+      <h1><%= title %></h1>
+
+      <style>
+        body {
+          background-color: <%- color %>
+        }
+      </style>
+      <form action="/" method="post">
+        <label for="olvidar">¿Volver y olvidar el color seleccionado?</label>
+        <input type="checkbox" name="olvidar" id="olvidar">
+        <input
+        type="submit"
+        value="enviar"
+        name="enviar"
+        style="display: block"
+      />
+      </form>
+    </main>
+  </body>
+</html>
